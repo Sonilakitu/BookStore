@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
+app.use(cors());
 
 // In-memory user database
 const users = [];
@@ -16,6 +18,11 @@ app.post('/register', (req, res) => {
     return res.status(400).send('Username and password are required.');
   }
   const newUser = { username, password };
+  const user = users.find((u) => u.username === username);
+  if (user) {
+    return res.status(401).send('User already exists');
+  }
+
   users.push(newUser);
   console.log(users)
   res.status(201).send('User registered successfully.');
