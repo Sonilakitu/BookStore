@@ -1,0 +1,35 @@
+src/components/Home.css
+
+.home-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .welcome-message {
+    margin-bottom: 30px;
+  }
+  
+  .featured-book {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book-cover {
+    width: 150px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .book-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .book-description {
+    font-size: 14px;
+  }
+  

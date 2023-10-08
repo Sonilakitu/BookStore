@@ -1,0 +1,36 @@
+/* src/components/Book.css */
+.book {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .book-cover {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .book-title {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .book-author,
+  .book-genre {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .book-description {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .book-rating {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
