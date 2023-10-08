@@ -4,7 +4,7 @@ import jsonData from '../booksData.json'
 
 const Home = () => {
   // Filter bestseller books with a rating above 4.2
-  const bestsellers = jsonData.books.filter((book) => book.rating > 4.2);
+  const bestsellers = jsonData.books.filter((book) => book.rating > 4.5);
   return (
     <div className="home-container">
       <div className="welcome-message">
