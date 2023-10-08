@@ -1,36 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useCart } from '../CartContext';
 
 const ShoppingCart = () => {
-  const [cartItems, setCartItems] = useState([]);
-  
-  // Function to add a book to the cart
-  const addToCart = (book) => {
-    setCartItems([...cartItems, book]);
-  };
-  
-  // Function to remove a book from the cart
-  const removeFromCart = (book) => {
-    const updatedCart = cartItems.filter((item) => item !== book);
-    setCartItems(updatedCart);
+  const { cart, removeFromCart } = useCart();
+
+  const calculateTotalQuantity = () => {
+    return cart.length;
   };
 
-  // Calculate the total price of items in the cart
-  const calculateTotalPrice = () => {
-    return cartItems.reduce((total, book) => total + book.price, 0);
+  const groupItemsByTitle = () => {
+    const groupedItems = {};
+
+    cart.forEach((book) => {
+      if (!groupedItems[book.title]) {
+        groupedItems[book.title] = { ...book, quantity: 1 };
+      } else {
+        groupedItems[book.title].quantity++;
+      }
+    });
+
+    return Object.values(groupedItems);
   };
 
   return (
     <div className="shopping-cart">
       <h2>Shopping Cart</h2>
       <ul>
-        {cartItems.map((book, index) => (
+        {groupItemsByTitle().map((item, index) => (
           <li key={index}>
-            {book.title} - ${book.price}
-            <button onClick={() => removeFromCart(book)}>Remove</button>
+            <div className="cart-item">
+              <img src={item.coverImage} alt={item.title} className="cart-item-image" />
+              <div className="cart-item-details">
+                <h3>{item.title}</h3>
+                <p>Quantity: {item.quantity}</p>
+              </div>
+              <button onClick={() => removeFromCart(item)}>Remove</button>
+            </div>
           </li>
         ))}
       </ul>
-      <p>Total: ${calculateTotalPrice()}</p>
+      <p>Total Quantity: {calculateTotalQuantity()}</p>
     </div>
   );
 };
