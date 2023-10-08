@@ -19,20 +19,19 @@ function App() {
         <h1>Bookstore Application</h1>
         <Router>
       <Navbar/>
-      <Routes>
-        <Route exact path="/home" Component={Home}/>
-        <Route  path="/books" Component={BookList}/>
-        <Route path="/book" Component={BookDetailsPage} />
-        <Route  path="/authors" Component={AuthorsPage}/>
-        <Route path="/cart" Component={ShoppingCart} />
-        </Routes>
+      
      </Router>
       </header>
       <main className="app-main">
         <Router>
       <Routes>
-            <Route path="/login" Component={Login} />
-            <Route path="/register" Component={Register}/>
+      <Route exact path="/home" Component={Home}/>
+        <Route  path="/books" Component={BookList}/>
+        <Route path="/book" Component={BookDetailsPage} />
+        <Route  path="/authors" Component={AuthorsPage}/>
+        <Route path="/cart" Component={ShoppingCart} />
+        <Route path="/login" Component={Login} />
+        <Route path="/register" Component={Register}/>
       </Routes>
       </Router>
       </main>
