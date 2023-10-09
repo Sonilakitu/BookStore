@@ -5,6 +5,8 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const baseURL = "https://tender-shift-hare.cyclic.app";
+
   const handleRegister = async () => {
     try {
       // Create an object with the user's registration data
@@ -13,7 +15,7 @@ const Register = () => {
         password: password,
       };
 
-      const response = await fetch('http://localhost:3000/register', {
+      const response = await fetch(`${baseURL}/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

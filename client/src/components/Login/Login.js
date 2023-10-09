@@ -5,6 +5,8 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const baseURL = "https://tender-shift-hare.cyclic.app";
+
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
 
@@ -14,7 +16,7 @@ const Login = () => {
         password,
       };
 
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch(`${baseURL}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
