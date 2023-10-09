@@ -5,7 +5,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const baseURL = "https://tender-shift-hare.cyclic.app";
+  const baseURL = "http://localhost:3000";
 
   const handleRegister = async () => {
     try {
