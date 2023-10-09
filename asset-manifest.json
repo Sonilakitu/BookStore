@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sonilakitu/BookStore/client/static/css/main.a59f089c.css",
+    "main.js": "/Sonilakitu/BookStore/client/static/js/main.fdba577c.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/Sonilakitu/BookStore/client/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/Sonilakitu/BookStore/client/index.html",
+    "main.a59f089c.css.map": "/Sonilakitu/BookStore/client/static/css/main.a59f089c.css.map",
+    "main.fdba577c.js.map": "/Sonilakitu/BookStore/client/static/js/main.fdba577c.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/Sonilakitu/BookStore/client/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a59f089c.css",
+    "static/js/main.fdba577c.js"
+  ]
+}
